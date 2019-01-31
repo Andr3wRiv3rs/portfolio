@@ -1,0 +1,48 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway;
+}
+html {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #282828;
+}
+body {
+  color: #e6e6e6;
+}
+#nav {
+  width: 4vw;
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 10px;
+}
+#nav button {
+  width: 4vw;
+  height: 4vw;
+  background-color: rgba(40,40,40,0.2);
+  border: none;
+  float: left;
+  background-image: url("/images/stuff_icon.png");
+  background-size: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+#nav button:hover {
+  background-color: rgba(230,230,230,0.2);
+}
+#nav button:nth-of-type(2) {
+  background-image: url("/images/gallery_icon.png");
+}
+#nav button:nth-of-type(3) {
+  background-image: url("/images/music_icon.png");
+}
+#nav button:nth-of-type(4) {
+  background-image: url("/images/social_icon.png");
+}

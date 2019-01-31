@@ -1,0 +1,132 @@
+#gallery
+    color $gray
+    top 0
+    left 0
+    width 100%
+    height 100vh
+    background-color $black
+    background-position center bottom
+    overflow hidden
+
+#gallery-preview
+    display block
+    width auto
+    overflow-x auto
+    display block
+    height 15vh
+    white-space:nowrap
+    transition margin-left 0.4s
+    margin-left 0
+    overflow hidden
+    display inline-block
+
+#gallery-preview-wrapper
+    width 100%
+    height 15vh
+    overflow hidden
+
+.preview-thumb
+    width 15vh
+    height 15vh
+    display inline-block
+    background-size auto 15vh
+    background-position center center
+    background-repeat no-repeat
+    cursor pointer
+    box-sizing border-box
+    transition border 0.1s
+    border-bottom 0px solid transparent
+    border-top 0px solid transparent
+
+    &.active
+        border-bottom 1vh solid $pink
+        border-top 1vh solid transparent
+
+#gallery-image
+    width auto
+    height calc(100% - 15vh)
+    width 100%
+    text-align center
+    padding 20px
+    box-sizing border-box
+
+    div
+        height 100%
+        width 100%
+        background-size contain
+        background-repeat no-repeat
+        background-position center center
+
+    @media (max-aspect-ratio: 4/2) and (max-width: 900px) and (min-aspect-ratio: 4/3)
+        width calc(100% - 18vw)
+        margin-left 9vw
+
+    @media (max-aspect-ratio: 4/3) 
+        height calc(100% - 15vh - 10vw)
+        display flex
+        flex-direction column
+        align-items center
+        justify-content center
+
+    @media (max-aspect-ratio: 1/1)
+        height calc(100% - 15vh - 15vw)
+
+    @media (max-aspect-ratio: 2/3) 
+        height calc(100% - 15vh - 25vw)
+
+        
+#gallery-controls
+    background-color $pink
+    position absolute
+    height 8vh
+    width 16vh
+    bottom 30px
+    border-radius 10px
+    left calc(50vw - 8vh - 30px)
+
+    display none
+
+    div
+        float left
+        width 50%
+        height 100%
+        cursor pointer
+        line-height 8vh
+        text-align center
+        font-family 'Anonymous Pro',sans-serif
+        font-size 3vh
+
+
+#index
+    bottom 30px
+    left 30px
+    position absolute
+    font-family "Open Sans"
+    font-weight 200
+    height 8vh
+    width 8vh
+    text-align center
+    line-height 8vh
+    font-size 5vh
+    color white
+    border-radius 15px 0 15px 0
+    text-shadow 0 0 10px $black
+    display none
+
+#gallery-background
+    top 0
+    left 0
+    height 100%
+    background-size 200%
+    background-position center center
+    filter blur(30px) brightness(50%)
+    width 100%
+    pointer-events none
+    overflow hidden
+
+#gallery-inner
+    width 100%
+    position absolute
+    top 0
+    left 0
+    height 100vh
