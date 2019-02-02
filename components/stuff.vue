@@ -8,7 +8,8 @@
                     <a v-for="h in i.handles" :key="h" :href="`https://twitter.com/`+h" target="_blank">@{{h}}</a
                     ><a v-for="h in i.gj_handles" :key="h" :href="`https://gamejolt.com/@`+h" target="_blank">@{{h}}</a
                     ><a v-for="h in i.ig_handles" :key="h" :href="`https://www.instagram.com/`+h" target="_blank">@{{h}}</a>
-                </div> 
+                </div>
+                <div class="links"><a v-for="l in i.links" target="_blank" :key="l.type" :href="l.url" :style="`background-image:url(/images/icons/${l.type}.png)`"></a></div>
             </div>
         </div>
 

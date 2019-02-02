@@ -13,7 +13,10 @@ module.exports.entries = [{
     "bg": "yaaiia",
     "handles": ["Andr3wRiv3rs", "twpunkster"],
     "gj_handles": ["anthonyme00"],
-    "links": [{"type": "gj", "url": "https://gamejolt.com/games/yaaiia/377383"}]
+    "links": [{
+        "type": "gj", 
+        "url": "https://gamejolt.com/games/yaaiia/377383"
+    }]
 }, {
     "title": "Twilight Punkster Galaxy",
     "date": "10/24/18 - 12/13/2018",
@@ -86,5 +89,11 @@ module.exports.entries = [{
     "date": "8/11/17 - 8/18/17",
     "desc": "An online multiplayer bear turn based RPG for the 2017 Bear Week jam on Game Jolt",
     "bg": "bearmon",
-    "links": []
+    "links": [{
+        "type": "gj",
+        "url": "https://gamejolt.com/games/bearmon/276536"
+    }, {
+        "type": "gh",
+        "url": "https://github.com/Andr3wRiv3rs/bearmon-2017"
+    }]
 }];
