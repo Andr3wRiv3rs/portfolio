@@ -33,7 +33,8 @@ module.exports.entries = [{
     "title": "Stardust",
     "date": "10/11/18 - 10/24/18",
     "desc": "Briefly worked with Stardust's blockchain technologies, building a client in Electron.",
-    "bg": "stardust"
+    "bg": "stardust",
+    "left": true
 }, {
     "title": "Corgi Stack 3D",
     "date": "10/01/18 - Present",
@@ -65,7 +66,8 @@ module.exports.entries = [{
     }, {
         "type": "gh",
         "url": "https://github.com/Andr3wRiv3rs/Cherry"
-    }]
+    }],
+    "left": true
 }, {
     "title": "Untitled Worm I/O",
     "date": "8/01/18 - 8/07/18",
@@ -83,7 +85,8 @@ module.exports.entries = [{
     "links": [{
         "type": "gh",
         "url": "https://github.com/Andr3wRiv3rs/Shh-Client"
-    }]
+    }],
+    "left": true
 }, {
     "title": "Bearmon",
     "date": "8/11/17 - 8/18/17",
@@ -95,5 +98,6 @@ module.exports.entries = [{
     }, {
         "type": "gh",
         "url": "https://github.com/Andr3wRiv3rs/bearmon-2017"
-    }]
+    }],
+    "left": true
 }];

@@ -7,6 +7,7 @@ $pink = #ff69b4
     margin 0
     padding 0
     font-family 'Montserrat'
+    -webkit-tap-highlight-color transparent
 
 html
     height auto
@@ -23,7 +24,7 @@ html,body,#main,#__nuxt,#__layout
 
 #nav
     pointer-events none
-    position absolute
+    position fixed
     overflow hidden
     z-index 5
     display flex
@@ -66,6 +67,14 @@ html,body,#main,#__nuxt,#__layout
             background-image url(/images/music_icon.png)
         &:nth-of-type(4)
             background-image url(/images/social_icon.png)
+
+
+    @media (max-width:1000px)
+        width auto
+        button
+            width 9vw
+            height 9vw
+            background-size 6vw
 
 #main
     width 100%

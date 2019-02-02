@@ -18,11 +18,15 @@
     margin-left 0
     overflow hidden
     display inline-block
+    @media (max-aspect-ratio: 2/3)
+        height 12vh
 
 #gallery-preview-wrapper
     width 100%
     height 15vh
     overflow hidden
+    @media (max-aspect-ratio: 2/3)
+        height 12vh
 
 .preview-thumb
     width 15vh
@@ -36,6 +40,11 @@
     transition border 0.1s
     border-bottom 0px solid transparent
     border-top 0px solid transparent
+
+    @media (max-aspect-ratio: 2/3)
+        height 12vh
+        width 12vh
+        background-size auto 12vh
 
     &.active
         border-bottom 1vh solid $pink

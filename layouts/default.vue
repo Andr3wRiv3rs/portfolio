@@ -40,6 +40,12 @@
       changePage(pageInput) {
         this.page = pageInput            
       }
+    },
+
+    mounted () {
+      window.onkeypress = e => {
+        if (e.keyCode > 48 && e.keyCode < 53) this.page = ['stuff','gallery','music','social'][e.keyCode - 49]
+      }
     }
   }
 </script>
