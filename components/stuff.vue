@@ -10,7 +10,7 @@
                         <a v-for="h in i.gj_handles" :key="h" :href="`https://gamejolt.com/@`+h" target="_blank">@{{h}}</a>
                         <a v-for="h in i.ig_handles" :key="h" :href="`https://www.instagram.com/`+h" target="_blank">@{{h}}</a>
                     </div>
-                    <div class="links"><a v-for="l in i.links" target="_blank" :key="l.type" :href="l.url" :style="`background-image:url(/images/icons/${l.type}.png);`"></a></div>
+                    <div class="links"><a v-for="l in i.links" target="_blank" :key="l.type" :href="l.url" :style="`background-image:url(/images/icons/${l.type}_circle.svg);`"></a></div>
                 </div>
             </div>
 
@@ -72,6 +72,13 @@
                     }
                 }
                 stuff.ontouchend = () => {stuff.ontouchmove = () => {}}
+            }
+
+            document.onkeydown = e => {
+                if (stuff.offsetWidth > 0) {
+                    if (e.keyCode === 37) this.slide(this.index-1, true);
+                    if (e.keyCode === 39) this.slide(this.index+1, true);
+                }
             }
         }
     }

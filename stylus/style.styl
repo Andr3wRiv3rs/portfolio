@@ -6,8 +6,15 @@ $pink = #ff69b4
 *
     margin 0
     padding 0
-    font-family 'Montserrat'
+    font-family 'Montserrat', monospace, sans-serif, serif
     -webkit-tap-highlight-color transparent
+    scrollbar-width thin
+    scrollbar-color $pink $black
+    &::-webkit-scrollbar
+        width 8px
+        background-color: $dark;
+    &::-webkit-scrollbar-thumb
+        background  $pink
 
 html
     height auto
@@ -42,7 +49,7 @@ html,body,#main,#__nuxt,#__layout
         height 5vw
         background-color transparent
         border none
-        background-image url(/images/stuff_icon.png)
+        background-image url(/images/stuff.svg)
         background-size 4vw
         background-position center center
         background-repeat no-repeat
@@ -61,12 +68,12 @@ html,body,#main,#__nuxt,#__layout
         &.inactive:hover
             border-left 1vh solid alpha($white,0.5)
 
-        &:nth-of-type(2)
-            background-image url(/images/gallery_icon.png)
+        &:nth-of-type(1)
+            background-image url(/images/home.svg)
         &:nth-of-type(3)
-            background-image url(/images/music_icon.png)
+            background-image url(/images/gallery.svg)
         &:nth-of-type(4)
-            background-image url(/images/social_icon.png)
+            background-image url(/images/music.svg)
 
 
     @media (max-width:1000px)
@@ -132,8 +139,12 @@ html,body,#main,#__nuxt,#__layout
             height 25vw
             background-size 14vw
 
+@require 'home'
+
 @require 'gallery'
 
 @require 'stuff' 
 
-@require 'music' 
+@require 'music'  
+
+@require 'social' 

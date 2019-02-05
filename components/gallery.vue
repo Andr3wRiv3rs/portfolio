@@ -29,10 +29,12 @@
         data () {
             return {
                 images: [
+                    "0-coffeeapple",
+                    "0-trixel_apple",
+                    "0-YinApple",
+                    "0-RadApple",
                     "0-AppleZkkov",
                     "0-ArcticApple",
-                    "0-RadApple",
-                    "0-YinApple",
                     "adamant",
                     "daily2",
                     "dren",
@@ -47,7 +49,7 @@
                     "unknown-46",
                     "waterfall"
                 ],
-                current: '0-AppleZkkov',
+                current: '0-coffeeapple',
                 index: 0
             }
         },
@@ -93,10 +95,12 @@
                 gallery.ontouchend = () => {gallery.ontouchmove = () => {}}
             }
 
-            window.onkeydown = e => {
-                if (e.keyCode === 37) this.selectImage(this.index-1);
-                if (e.keyCode === 39) this.selectImage(this.index+1)
-            }
+            window.addEventListener('keydown', e => {
+                if (gallery.offsetWidth > 0) {
+                    if (e.keyCode === 37) this.selectImage(this.index-1);
+                    if (e.keyCode === 39) this.selectImage(this.index+1);
+                }
+            });
         }
     }
 </script>

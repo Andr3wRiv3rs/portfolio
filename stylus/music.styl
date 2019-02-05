@@ -1,11 +1,17 @@
 #music
-    width 95vw
+    width 100%
     height 100%
     position absolute
     top 0
     left 0
     opacity 1
     pointer-events default
+    display flex
+    flex-direction row
+    align-items center
+
+    @media (max-aspect-ratio: 4/3)
+        display block
 
 button 
     outline none
@@ -25,192 +31,234 @@ button
     background-size cover
 
 #nowplaying
-    background $white
-    color $dark-gray
-    position absolute
-    bottom 0
+    color $white
+    width 50vw
+    height 100vh
+    display flex
+    flex-direction column
+    background-color transparent
+    align-items center
+    justify-content center
+    background-color alpha($dark-gray,0.5)
+
+    .bg
+        position absolute
+        background-size cover
+        background-position center center
+        filter brightness(70%)
+        width 50vw
+        height 100vh
+        overflow hidden
+        z-index -1
+        @media (max-aspect-ratio: 4/3)
+            display none
+        img 
+            width 60vw
+            height 110vh
+            margin-left -5vw
+            margin-top -5vh
+            filter blur(50px) contrast(90%)
 
     *:not(a)
-        color $dark-gray
-
-    width 50vw
-    float right
+        color white
     
+    .cover
+        height 20vw
+        width 20vw
+        background-size cover
+        border-radius 5px
+
+    h2
+        font-weight 200
+        letter-spacing 1px
+        display block
+        text-align center
+        margin-bottom 10px
+        font-size 30px
+        width 40vw
+
     .np-inner-wrapper
-        display flex
-        flex-direction column
-        justify-content center
+        max-width 35vw
 
-        h2
-            letter-spacing 1px
-            font-weight 800
-            display block
-
-        .desc
-            box-sizing border-box
-            text-align left
-            opacity 0.8
-            a
-                &:hover
-                    color $dark-gray
-                    border-bottom 1px solid $gray
-
+    #np-bar-wrapper
+        width 20vw
+        display block
+        height 2vh
+        margin-top 10px
         #np-bar-bg
-            background $gray
+            background $black
 
         .load-bar
             float left
+            height 3vh
 
         #np-bar
-            background $blue
+            background $pink
             pointer-events none
+            margin-top -1vh
+            height 1vh
+            border-radius 1vh
 
         #np-bar-bg
             width 100%
+            height 1vh
+            border-radius 1vh
 
         #np-bar
             width 0%
 
-    @media (max-aspect-ratio: 8/7)
-        height 25vh
+        #np-bar-pad
+            margin-top -2.1vh
+            width 100%
 
-        button 
-            opacity 0
-            pointer-events none 
-            height 0
-            width 0
-
-        .np-inner-wrapper
-            height auto
+        @media (max-aspect-ratio: 4/3) 
             width 100%
             margin 0
-            padding 0
-            top 0
 
-            .load-bar
-                height 0.5vh
-                position absolute
-                top 25vh
+            #np-bar
+                border-radius 0
+                height 2vh
+                margin-top -2vh
+            
+            #np-bar-bg
+                border-radius 0
+                height 2vh
 
             #np-bar-pad
-                display inline-block
-                width 100%
                 height 4vh
-                top 21vh
+                margin-top -2vh
+    
+    #controls
+        opacity 0.8
 
-            h2
-                font-size 6vh
-                margin 0
-                padding-left 2vh
-                padding-right 2vh
-                text-align center
+    button
+        border none 
+        background-color transparent
+        height 50px
+        width 50px
+        font-size 20px
+        display flex
+        align-items center
+        justify-content center
+        font-family monospace,serif
+        border-radius 999px
+        cursor default
+        margin 5px
 
-            .desc
-                width 100%
-                padding 3vh
-                padding-top 1vh
-                text-align center
-                font-size 2vh 
+        &:hover
+            background-color alpha(white,0.3)
 
-    @media (min-aspect-ratio: 8/7)
-        height 12vw
+        &.play
+            border 1px solid white
+            font-family Montserrat
+            text-align center
 
-        button
-            opacity 1
-            pointer-events default 
-            margin-right 1vw
-            font-size 4vw
-            width 12vw
-            height 12vw
-            background $gray
-            color $white
-            &:hover
-                background-color $white
-                color $gray
+        &.disabled
+            opacity 0.3
+            pointer-events none
 
-        .np-inner-wrapper
-            height 100%
-            width 80vw
+    @media (max-aspect-ratio: 4/3) 
+        position fixed
+        height auto
+        width 100%
+        bottom 0
+        z-index 1
+        padding-bottom 10vw
+        background-color $black
 
+        #controls
+            height 50px
+            display flex
+            flex-direction row
+            align-items center
+            justify-content center
+            margin-top 10px
 
-            #np-bar-pad
-                display inline-block
-                width 100%
-                height 2vw
-                top 10vw
+        .cover
+            display none
 
-            .load-bar
-                height 0.5vw
-                position absolute
-                top 11.5vw
-                left 0
+        h2
+            float left
+            margin 0
+            position fixed
+            top 0
+            padding 10px
+            height 40px
+            font-size 20px
+            display flex
+            justify-content center
+            align-items center
+            background-color $black
+            width 100%
 
-            h2
-                font-size 2vw
+    @media (max-aspect-ratio: 1/1) 
+        padding-bottom 15vw
 
-            .desc
-                width 100%
-                padding-top 0.5vw
+    @media (max-aspect-ratio: 2/3) 
+        padding-bottom 25vw
 
-                @media (max-aspect-ratio: 12/8)
-                        font-size 1.4vw
-
-                @media (min-aspect-ratio: 12/8)
-                        font-size 1.2vw 
-
-                padding-bottom 1vw
 a
     color $pink
     text-decoration none
     cursor pointer
+
     &:hover
         color $white
         border-bottom 1px solid $white
 
 #playlist
-    width 100%
+    width 50vw
     overflow-y auto
     overflow-x hidden
     height 100%
+    right 0
+
+    @media (max-aspect-ratio: 4/3) 
+        width 100%
+        overflow-y visible
+        height auto
+        padding-top 60px
+        padding-bottom calc(10vw + 60px)
+
+    @media (max-aspect-ratio: 1/1) 
+        padding-bottom calc(15vw + 60px)
+
+    @media (max-aspect-ratio: 2/3) 
+        padding-bottom calc(25vw + 60px)
 
 .track
-    background $black
-    width calc(100%/10)
+    width calc(100%/3)
     float left
-    cursor pointer
     box-sizing border-box
+    cursor pointer
+    transition opacity 0.05s
+    opacity 0.8
+
+    @media (max-aspect-ratio: 2/3) 
+        width calc(100%/2)
+    
+    &:hover
+        opacity 1
 
 .track-inner
     height 0
     overflow hidden
     padding-top 100%
     position relative
+    
     button
         position absolute
         top 0
         left 0
         background-size cover
-        text-shadow 0px 0px 16px black
+        text-shadow 0px 0px 32px black
         background-position center center
         pointer-events none
         color $white
         width 100%
         height 100%
-        font-size 3vw
+        font-size 3vmax
+        font-family serif
 
-.track-inner-wrapper
-    display flex
-    flex-direction column
-    justify-content center
-    pointer-events none
-
-    h3
-        pointer-events none
-        font-weight 100
-        float left
-        width 100%
-        text-align left
-
-        .time
-            float right
-            color alpha($white,0.7)
+        @media (max-aspect-ratio: 4/3) 
+            font-size 6vmax

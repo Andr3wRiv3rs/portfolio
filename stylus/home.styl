@@ -1,0 +1,74 @@
+#home
+    #header
+        height 100vh
+        width 100vw
+        display flex
+        flex-direction column
+        align-items left
+        justify-content center
+        background-color $black
+        background-image url('/images/Sac_clouds.png')
+        background-size cover
+        background-position center bottom
+        padding-left 10vw
+        padding-right 10vw
+        box-sizing border-box
+
+        #links
+            margin-left 7px
+            margin-top 10px
+            display flex
+            flex-wrap wrap
+            align-items center
+            justify-content left
+
+            div
+                line-height 2rem
+                font-size 1.1rem
+                margin-left 10px
+                opacity 1
+                
+                @media (max-width: 780px)
+                    margin-left 0
+                    width 100%
+                    margin-top 10px
+
+            @media (max-width: 600px)
+                justify-content center
+                div
+                    text-align center
+                    width 100%
+        a
+            float left
+            margin-right 10px
+            margin-top 10px
+            border none !important
+            img
+                float left
+                width 5rem
+                filter saturate(80%)
+
+            @media (max-width: 600px)
+                img
+                    width calc(80vw / 4 - 15px)
+        
+        h1,h2
+            font-family Raleway
+            font-weight 200
+            letter-spacing 1px
+            padding 5px
+            font-size 3rem
+
+            @media (max-width: 1000px)
+                font-size 2rem
+            
+            @media (max-width: 600px)
+                text-align center
+                font-size 1.7rem
+        
+        h2
+            opacity 0.8
+            font-size 1.7rem
+
+            @media (max-width: 600px)
+                font-size 1.3rem
