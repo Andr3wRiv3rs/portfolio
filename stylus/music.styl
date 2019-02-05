@@ -50,7 +50,7 @@ button
         height 100vh
         overflow hidden
         z-index -1
-        @media (max-aspect-ratio: 4/3)
+        @media (max-width: 800px) 
             display none
         img 
             width 60vw
@@ -111,7 +111,7 @@ button
             margin-top -2.1vh
             width 100%
 
-        @media (max-aspect-ratio: 4/3) 
+        @media (max-width: 800px) 
             width 100%
             margin 0
 
@@ -157,7 +157,7 @@ button
             opacity 0.3
             pointer-events none
 
-    @media (max-aspect-ratio: 4/3) 
+    @media (max-width: 800px) 
         position fixed
         height auto
         width 100%
@@ -191,10 +191,10 @@ button
             background-color $black
             width 100%
 
-    @media (max-aspect-ratio: 1/1) 
+    @media (max-width: 600px) 
         padding-bottom 15vw
 
-    @media (max-aspect-ratio: 2/3) 
+    @media (max-width: 400px) , (max-aspect-ratio: 2/3)
         padding-bottom 25vw
 
 a
@@ -213,17 +213,17 @@ a
     height 100%
     right 0
 
-    @media (max-aspect-ratio: 4/3) 
+    @media (max-width: 800px) 
         width 100%
         overflow-y visible
         height auto
         padding-top 60px
         padding-bottom calc(10vw + 60px)
 
-    @media (max-aspect-ratio: 1/1) 
+    @media (max-width: 600px) 
         padding-bottom calc(15vw + 60px)
 
-    @media (max-aspect-ratio: 2/3) 
+    @media (max-width: 400px) , (max-aspect-ratio: 2/3)
         padding-bottom calc(25vw + 60px)
 
 .track
@@ -260,5 +260,5 @@ a
         font-size 3vmax
         font-family serif
 
-        @media (max-aspect-ratio: 4/3) 
+        @media (max-width: 800px) 
             font-size 6vmax
