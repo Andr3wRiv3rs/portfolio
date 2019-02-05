@@ -14,10 +14,26 @@
                 </div>
             </div>
         </div>
+        <div id="skills">
+            <p v-for="i in skills" :key="i">{{i}}</p>
+        </div>
+        <div id="home-navbar-bg"></div>
     </div>
 </template>
 <script>
     export default {
-
+        data () {
+            return {
+                skills: [
+                    'HTML/CSS','JavaScript','Node.js','Vue.js','Nuxt.js','Stylus',
+                    'SCSS','jQuery','Express','NGINX','Apache',
+                    'PHP','WordPress','Electron','Phonegap',
+                    'MongoDB','MySQL','discord.js',
+                    'Unity','Godot','GameMaker: Studio','Phaser',
+                    'Construct 2','GIMP','Inkscape','Hexels',
+                    'Aseprite','MagicaVoxel','VoxelShop','Qubicle','Blender'
+                ]
+            }
+        }
     }
 </script>

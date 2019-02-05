@@ -12,7 +12,7 @@ $pink = #ff69b4
     scrollbar-color $pink $black
     &::-webkit-scrollbar
         width 8px
-        background-color: $dark;
+        background-color: $dark-gray;
     &::-webkit-scrollbar-thumb
         background  $pink
 
@@ -90,7 +90,7 @@ html,body,#main,#__nuxt,#__layout
     display none
 
 
-@media (max-aspect-ratio: 4/2) and (max-width: 900px) 
+@media (max-width: 1200px) 
     #nav
         width 9vw
         button
@@ -98,7 +98,7 @@ html,body,#main,#__nuxt,#__layout
             height 9vw
             background-size 6vw
 
-@media (max-aspect-ratio: 4/3) 
+@media (max-width: 800px) 
     #nav
         width 100%
         flex-direction row
@@ -125,14 +125,14 @@ html,body,#main,#__nuxt,#__layout
                 border-left none
 
 
-@media (max-aspect-ratio: 1/1) 
+@media (max-width: 600px) 
     #nav
         button.nav-button
             width calc(15vw - 6px)
             height 15vw
             background-size 12vw
 
-@media (max-aspect-ratio: 2/3) 
+@media (max-width: 400px), (max-aspect-ratio: 2/3)
     #nav
         button.nav-button
             width calc(25vw - 6px)
